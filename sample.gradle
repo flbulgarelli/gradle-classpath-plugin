@@ -1,12 +1,7 @@
 buildscript {
-    repositories {
-        mavenLocal()
-    }
     dependencies {
-        classpath group: 'com.zauberlabs.gradle.plugins', name: 'classpath-plugin', version: '1.0-SNAPSHOT'
+        classpath 'com.zauberlabs.gradle.snippets:gradle-create-dirs-snippet:1.0-SNAPSHOT'
     }
 }
 
-apply plugin: 'classpath'
-apply from: 'classpath://snippet.gradle'
-
+include 'create-groovy-dirs'
