@@ -16,3 +16,15 @@ repositories {
     mavenLocal()
 }
 
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            snapshotRepository(url: "https://repo1.zauberlabs.com/zauber/code/snapshots") {
+                authentication(userName: zauberlabsUsername, password: zauberlabsPassword)
+            }
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/")
+        }
+    }
+}
+
