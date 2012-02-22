@@ -4,4 +4,4 @@ buildscript {
     }
 }
 
-include 'create-groovy-dirs'
+require 'create-groovy-dirs'
